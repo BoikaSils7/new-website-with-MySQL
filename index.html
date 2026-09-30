@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern glassmorphism login and registration form" />
+  <title>Nova — Login & Register</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span>✦</span> NOVA</a>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">☼</button>
+        <button class="nav-button active" id="navLogin" type="button">Sign in</button>
+        <button class="nav-button" id="navRegister" type="button">Create account</button>
+      </div>
+    </nav>
+
+    <section class="auth-layout">
+      <div class="intro">
+        <p class="eyebrow">A simpler way to start</p>
+
+        <h1>
+          Welcome to your<br>
+          <span>next chapter.</span>
+        </h1>
+
+        <p class="intro-copy">
+          A calm, secure space for everything you want to build.
+          Sign in or create an account to get started.
+        </p>
+
+        <div class="trust">
+          <span class="avatars">● ● ●</span>
+          Trusted by a growing community
+        </div>
+      </div>
+
+      <div class="auth-card">
+        <div class="form-panel" id="loginPanel">
+          <div class="form-heading">
+            <p class="eyebrow">Good to see you</p>
+            <h2>Sign in</h2>
+            <p>Enter your details to continue.</p>
+          </div>
+
+          <form id="loginForm" novalidate>
+            <label>
+              Email address
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            </label>
+
+            <label>
+              Password
+              <div class="password-field">
+                <input type="password" name="password" autocomplete="current-password" placeholder="Your password" minlength="8" required>
+                <button type="button" class="show-password" aria-label="Show password">◉</button>
+              </div>
+            </label>
+
+            <div class="form-row">
+              <label class="check">
+                <input type="checkbox" name="remember">
+                <span>Remember me</span>
+              </label>
+
+              <a href="#" class="muted-link">Forgot password?</a>
+            </div>
+
+            <button class="primary-button" type="submit">
+              Sign in <span>→</span>
+            </button>
+
+            <p class="form-message" id="loginMessage" role="alert"></p>
+          </form>
+
+          <p class="switch-copy">
+            New here?
+            <button class="text-button" data-switch="register" type="button">
+              Create an account
+            </button>
+          </p>
+        </div>
+
+        <div class="form-panel hidden" id="registerPanel">
+          <div class="form-heading">
+            <p class="eyebrow">Join the community</p>
+            <h2>Create account</h2>
+            <p>It only takes a minute to get started.</p>
+          </div>
+
+          <form id="registerForm" novalidate>
+            <label>
+              Full name
+              <input type="text" name="name" autocomplete="name" placeholder="Alex Morgan" minlength="2" required>
+            </label>
+
+            <label>
+              Email address
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            </label>
+
+            <label>
+              Password
+              <div class="password-field">
+                <input type="password" name="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required>
+                <button type="button" class="show-password" aria-label="Show password">◉</button>
+              </div>
+            </label>
+
+            <label class="check terms">
+              <input type="checkbox" required>
+              <span>
+                I agree to the
+                <a href="#">Terms</a>
+                and
+                <a href="#">Privacy Policy</a>
+              </span>
+            </label>
+
+            <button class="primary-button" type="submit">
+              Create account <span>→</span>
+            </button>
+
+            <p class="form-message" id="registerMessage" role="alert"></p>
+          </form>
+
+          <p class="switch-copy">
+            Already have an account?
+            <button class="text-button" data-switch="login" type="button">
+              Sign in
+            </button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2024 Nova · Secure authentication powered by PHP & MySQL</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
